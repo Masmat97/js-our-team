@@ -1,42 +1,29 @@
-// Creazione array utente1
-const utente1 = {
-    nome: "Wayne Barnett",
-    ruolo: "Founder & CEO", 
-    immagine: "wayne-barnett-founder-ceo.jpg",
-}
-console.log( "Nome/ruolo: ", `${utente1.nome} ${utente1.ruolo}` );
-// Creazione array utente2
-const utente2 = {
-    nome: "Angela Caroll",
-    ruolo: "Chief Editor",
-    immagine: "angela-caroll-chief-editor.jpg",
-}
-console.log( "Nome/ruolo: ", `${utente2.nome} ${utente2.ruolo}` );
-// Creazione array utente3
-const utente3 = {
-    nome: "Walter Gordon",
-    ruolo: "Office Manager",
-    immagine: "walter-gordon-office-manager.jpg",
-}
-console.log( "Nome/ruolo: ", `${utente3.nome} ${utente3.ruolo}` );
-// Creazione array utente4
-const utente4 = {
-    nome: "Angela Lopez",
-    ruolo: "Social Media Manager",
-    immagine: "angela-lopez-social-media-manager.jpg",
-}
-console.log( "Nome/ruolo: ", `${utente4.nome} ${utente4.ruolo}` );
-// Creazione array utente5
-const utente5 = {
-    nome: "Scott Estrada",
-    ruolo: "Developer",
-    immagine: "scott-estrada-developer.jpg",
-}
-console.log( "Nome/ruolo: ", `${utente5.nome} ${utente5.ruolo}` );
-// Creazione array utente6
-const utente6 = {
-    nome: "Barbara Ramos",
-    ruolo: "Graphic Designer",
-    immagine: "barbara-ramos-graphic-designer.jpg",
-}
-console.log( "Nome/ruolo: ", `${utente6.nome} ${utente6.ruolo}` );
+
+let utenti = [
+    { nome: "Wayne Barnett", ruolo: "Founder & CEO", immagine: "wayne-barnett-founder-ceo.jpg", },
+    { nome: "Angela Caroll", ruolo: "Chief Editor", immagine: "angela-caroll-chief-editor.jpg", },
+    { nome: "Walter Gordon", ruolo: "Office Manager", immagine: "walter-gordon-office-manager.jpg", },
+    { nome: "Angela Lopez", ruolo: "Social Media Manager", immagine: "angela-lopez-social-media-manager.jpg", },
+    { nome: "Scott Estrada", ruolo: "Developer", immagine: "scott-estrada-developer.jpg", },
+    { nome: "Barbara Ramos", ruolo: "Graphic Designer", immagine: "barbara-ramos-graphic-designer.jpg",}
+
+    
+]
+console.log(utenti)
+
+
+
+// Stampare su console il nome e il ruolo di ogni membro del team
+utenti.forEach((membro) => {
+    console.log("Nome:", membro.nome, "| Ruolo:", membro.ruolo);
+  });
+  
+  // Trova un elemento HTML dove vuoi stampare i dettagli del team
+  const container = document.getElementById("container");
+  
+  // Stampare in pagina nome, ruolo e immagine per ogni membro del team
+  utenti.forEach((membro) => {
+    const elemento = document.createElement("div");
+    elemento.textContent = `Nome: ${membro.nome}, Ruolo: ${membro.ruolo}, Immagine: ${membro.immagine}`;
+    container.appendChild(elemento);
+  });
